@@ -2,6 +2,29 @@
   "schemaVersion": 1,
   "plugins": [
     {
+      "id": "official.labeledit",
+      "title": "LabelEdit",
+      "description": "本地 PDF 标签编辑、文字识别与导出",
+      "category": "标签与文档",
+      "version": "0.1.2",
+      "api": "^1.1.0",
+      "releaseNotes": "独立仓库发布，通用私有图片资源与离线 PDF/OCR。",
+      "artifacts": {
+        "darwin-arm64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-labeledit/releases/download/v0.1.2/official.labeledit-0.1.2-darwin-arm64.ecplugin",
+          "size": 184431411,
+          "sha256": "08d8c745a16ff9ab91941951bf1b832cd99fb0271b9724bab8a06efd8e44b88f",
+          "signature": "jgwgYkpBa/XZDPBcPO0blQlLvwv66vU2d4KJ2QCL1RJZ+hsuQ+7sPw72Ja8ES7ouYT9p2vK2IeVvrBDk+gJ2BQ=="
+        },
+        "win32-x64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-labeledit/releases/download/v0.1.2/official.labeledit-0.1.2-win32-x64.ecplugin",
+          "size": 144496464,
+          "sha256": "3861cd026f03efe72f2cc8e5c6fd2144110fbe282a4c9edaf25387369f1149ff",
+          "signature": "iVNf9l+zP2IA4BNRjfADJ3Hub4b7LmJDOnIqMEfdtvoWvzFvnmUTTG7/3vVxzx1aU4ZiX4knKXlO/eM5fiy1Ag=="
+        }
+      }
+    },
+    {
       "id": "official.removebg",
       "title": "AI 抠图",
       "description": "连接 remove.bg，生成透明背景的商品图片",
