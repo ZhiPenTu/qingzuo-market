@@ -1,0 +1,38 @@
+name: Review plugin releases
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Registered plugin repository; blank checks both publishers'
+        required: false
+        type: string
+      tag:
+        description: 'Stable version tag; blank selects latest stable release'
+        required: false
+        type: string
+  schedule:
+    - cron: '7,37 * * * *'
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: market-ingest
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test && npm run validate
+      - name: Verify, sign and propose catalog changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMMERCE_PLUGIN_SIGNING_KEY: ${{ secrets.COMMERCE_PLUGIN_SIGNING_KEY }}
+          PLUGIN_REPOSITORY: ${{ inputs.repository }}
+          PLUGIN_TAG: ${{ inputs.tag }}
+        run: npm run ingest
