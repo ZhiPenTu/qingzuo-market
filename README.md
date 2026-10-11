@@ -1,6 +1,6 @@
 # Qingzuo market
 
-The verifier uses SDK 1.1.1 from the immutable sdk-v1.1.1 Release tarball, pinned with lockfile integrity. Runtime compatibility is API 1.1.0.
+The verifier uses SDK 1.2.0 from the immutable sdk-v1.2.0 Release tarball, pinned with lockfile integrity. Runtime compatibility is API 1.2.0; existing API 1.0 / 1.1 plugins remain compatible. AI-capable plugins require Qingzuo 0.3.0 and explicit permissions validated by the SDK.
 
 Reviewed plugin catalog for Qingzuo. Only the registered public repositories in publishers.json may submit stable releases. The market validates both platform archives, GitHub release provenance, size, SHA-256, package identity and API metadata without executing plugin code.
 
