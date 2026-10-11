@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       repository:
-        description: 'Registered plugin repository; blank checks both publishers'
+        description: 'Registered plugin repository; blank checks all publishers'
         required: false
         type: string
       tag:

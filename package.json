@@ -1,6 +1,6 @@
 {
   "name": "qingzuo-market", "version": "1.0.0", "private": true, "type": "module",
   "scripts": { "test": "node --test tests/*.test.mjs", "validate": "node scripts/validate.mjs", "ingest": "node scripts/ingest.mjs" },
-  "dependencies": { "@commerce/plugin-sdk": "https://github.com/ZhiPenTu/LabelEdit/releases/download/sdk-v1.1.1/commerce-plugin-sdk-1.1.1.tgz", "adm-zip": "0.5.16", "semver": "7.8.5" },
+  "dependencies": { "@commerce/plugin-sdk": "https://github.com/ZhiPenTu/qingzuo-desktop/releases/download/sdk-v1.2.0/commerce-plugin-sdk-1.2.0.tgz", "adm-zip": "0.5.16", "semver": "7.8.5" },
   "license": "MIT"
 }
