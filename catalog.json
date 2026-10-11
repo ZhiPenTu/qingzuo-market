@@ -2,6 +2,29 @@
   "schemaVersion": 1,
   "plugins": [
     {
+      "id": "official.ai-image",
+      "title": "AI 批图",
+      "description": "复用 CLIProxyAPI 或官方 API 批量编辑图片，自定义提示词与 AI 助手",
+      "category": "图片处理",
+      "version": "0.1.0",
+      "api": "^1.2.0",
+      "releaseNotes": "首版：复用 CLIProxyAPI 图片模型或官方 API，支持逐图提示词、方案确认、后台批处理、结果保存与 Harness AI 助手。需要轻作 0.3.0。",
+      "artifacts": {
+        "darwin-arm64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-ai-image/releases/download/v0.1.0/official.ai-image-0.1.0-darwin-arm64.ecplugin",
+          "size": 17075,
+          "sha256": "12f2ed0c53c63e11b45ca38ecf1d557d8bd947ac9033763fc8aac0ba9a2135c0",
+          "signature": "hTrIZ8A2iirDsrgPZ0sBLAl/bWTvASu+LWQy81hKMIK7y4hhc4WOGl4eA3NC9e4z87AXOpMN/xp1Q2HOP0IdAA=="
+        },
+        "win32-x64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-ai-image/releases/download/v0.1.0/official.ai-image-0.1.0-win32-x64.ecplugin",
+          "size": 17123,
+          "sha256": "5162b91de806d88b8225a3e55d03f3430e14e8c7cf598c34268f166657567ed6",
+          "signature": "60MqqTf08MlM1jdVJSo0RxNkBm5d1RMQVHnJ27UAQnMGZkHlMuN9NKuPohFKUHiV5q4YF/XezfXZX0gNC9wmBw=="
+        }
+      }
+    },
+    {
       "id": "official.labeledit",
       "title": "LabelEdit",
       "description": "本地 PDF 标签编辑、文字识别与导出",
