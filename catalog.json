@@ -4,11 +4,11 @@
     {
       "id": "official.ai-image",
       "title": "AI 批图",
-      "description": "复用 CLIProxyAPI 或官方 API 批量编辑图片，自定义提示词与 AI 助手",
+      "description": "复用外部代理或官方 API 批量编辑图片，自定义提示词与 AI 助手",
       "category": "图片处理",
       "version": "0.1.0",
       "api": "^1.2.0",
-      "releaseNotes": "首版：复用 CLIProxyAPI 图片模型或官方 API，支持逐图提示词、方案确认、后台批处理、结果保存与 Harness AI 助手。需要轻作 0.3.0。",
+      "releaseNotes": "首版：复用外部代理图片模型或官方 API，支持逐图提示词、方案确认、后台批处理、结果保存与 Harness AI 助手。需要轻作 0.3.0。",
       "artifacts": {
         "darwin-arm64": {
           "url": "https://github.com/ZhiPenTu/qingzuo-plugin-ai-image/releases/download/v0.1.0/official.ai-image-0.1.0-darwin-arm64.ecplugin",
