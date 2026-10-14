@@ -92,6 +92,29 @@
           "signature": "WZ6ZqEs141sgTsA5c2OjZc6CNqVhPVIqYtrSCWJorrCpI93xFbND6F6qTRKAW06gRDgyxj5oP1lr4EPLNB5QDw=="
         }
       }
+    },
+    {
+      "id": "official.seedream",
+      "title": "Seedream 图像设计",
+      "description": "基于 Seedream 5.0 Pro 多模态图像生成模型，支持高画质文生图与图生图编辑",
+      "category": "图片处理",
+      "version": "0.1.0",
+      "api": "^1.2.0",
+      "releaseNotes": "首版：接入 Seedream 5.0 Pro 多模态图像生成模型，支持高画质文生图与多模态参考生图，提供 2K/1K 分辨率与输出格式选项，图片实时生成与保存。",
+      "artifacts": {
+        "darwin-arm64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-seedream/releases/download/v0.1.0/official.seedream-0.1.0-darwin-arm64.ecplugin",
+          "size": 8291,
+          "sha256": "83e7d65bd156912842a1225f23213a19bebce9ef5d6720bc430ea643dd9aa01b",
+          "signature": "4FjYQEh4JeXeft/gjrpvTl4iZtbGtC70E90U5gY1JpU7WxisZSBHRDcgQNlbh8jK9iykA7kbigbcSnRHO1zSDQ=="
+        },
+        "win32-x64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-seedream/releases/download/v0.1.0/official.seedream-0.1.0-win32-x64.ecplugin",
+          "size": 8291,
+          "sha256": "83e7d65bd156912842a1225f23213a19bebce9ef5d6720bc430ea643dd9aa01b",
+          "signature": "4FjYQEh4JeXeft/gjrpvTl4iZtbGtC70E90U5gY1JpU7WxisZSBHRDcgQNlbh8jK9iykA7kbigbcSnRHO1zSDQ=="
+        }
+      }
     }
   ]
 }
