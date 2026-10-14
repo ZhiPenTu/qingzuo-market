@@ -71,6 +71,29 @@
       }
     },
     {
+      "id": "official.seed-audio",
+      "title": "Seed Audio 音频创作",
+      "description": "基于 Seed Audio 1.0 模型创作人声、音效与音乐，支持场景化音频生成",
+      "category": "音频创作",
+      "version": "0.1.0",
+      "api": "^1.2.0",
+      "releaseNotes": "首版：接入 Seed Audio 1.0 音频创作模型，支持台词旁白、音效场景与背景音乐生成，提供采样率、语速与音高调节，音频在线试听与导出。",
+      "artifacts": {
+        "darwin-arm64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-seed-audio/releases/download/v0.1.0/official.seed-audio-0.1.0-darwin-arm64.ecplugin",
+          "size": 7820,
+          "sha256": "feb29e963c878ff4b61a7041455b6d44a628444df1d942c6084a8adab2771963",
+          "signature": "YBzaev5BW4rjkHBozgwNhHHeN85vzlg0xMp6aByUaxiJ8pvJjhv+0Hs4vU7kwPUwP5/bvMtHsViSVeplycmmCw=="
+        },
+        "win32-x64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-seed-audio/releases/download/v0.1.0/official.seed-audio-0.1.0-win32-x64.ecplugin",
+          "size": 7820,
+          "sha256": "feb29e963c878ff4b61a7041455b6d44a628444df1d942c6084a8adab2771963",
+          "signature": "YBzaev5BW4rjkHBozgwNhHHeN85vzlg0xMp6aByUaxiJ8pvJjhv+0Hs4vU7kwPUwP5/bvMtHsViSVeplycmmCw=="
+        }
+      }
+    },
+    {
       "id": "official.seedance",
       "title": "Seedance 视频生成",
       "description": "基于 Seedance 2.5 模型生成高质量视频，支持文生视频与首帧图生视频",
