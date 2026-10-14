@@ -69,6 +69,29 @@
           "signature": "2gdavy/RsPy/JAZ98m5UNUJxWekf1xG9GqCfvcBxju6dWpE+n/jsL7ZmVLDzvT4yrcVvnJ+oGsD6sV9VdRPsDw=="
         }
       }
+    },
+    {
+      "id": "official.seedance",
+      "title": "Seedance 视频生成",
+      "description": "基于 Seedance 2.5 模型生成高质量视频，支持文生视频与首帧图生视频",
+      "category": "视频生成",
+      "version": "0.1.0",
+      "api": "^1.2.0",
+      "releaseNotes": "首版：接入 Seedance 2.5 新一代视频生成模型，支持文生视频与首帧图生视频，提供比例、分辨率与时长配置，生成任务异步轮询与结果预览保存。",
+      "artifacts": {
+        "darwin-arm64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-seedance/releases/download/v0.1.0/official.seedance-0.1.0-darwin-arm64.ecplugin",
+          "size": 9095,
+          "sha256": "79603da9fe15aacd5d711022a100a84fa2338e93c23d37380739f42649ab1a18",
+          "signature": "WZ6ZqEs141sgTsA5c2OjZc6CNqVhPVIqYtrSCWJorrCpI93xFbND6F6qTRKAW06gRDgyxj5oP1lr4EPLNB5QDw=="
+        },
+        "win32-x64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-seedance/releases/download/v0.1.0/official.seedance-0.1.0-win32-x64.ecplugin",
+          "size": 9095,
+          "sha256": "79603da9fe15aacd5d711022a100a84fa2338e93c23d37380739f42649ab1a18",
+          "signature": "WZ6ZqEs141sgTsA5c2OjZc6CNqVhPVIqYtrSCWJorrCpI93xFbND6F6qTRKAW06gRDgyxj5oP1lr4EPLNB5QDw=="
+        }
+      }
     }
   ]
 }
