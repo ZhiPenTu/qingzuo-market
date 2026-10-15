@@ -4,23 +4,23 @@
     {
       "id": "official.ai-image",
       "title": "AI 批图",
-      "description": "复用外部代理或官方 API 批量编辑图片，自定义提示词与 AI 助手",
+      "description": "复用外部代理或官方 API 批量编辑图片，支持自定义提示词与多模型批处理",
       "category": "图片处理",
-      "version": "0.1.0",
+      "version": "0.1.2",
       "api": "^1.2.0",
-      "releaseNotes": "首版：复用外部代理图片模型或官方 API，支持逐图提示词、方案确认、后台批处理、结果保存与 Harness AI 助手。需要轻作 0.3.0。",
+      "releaseNotes": "更新：移除插件内置对话 AI，统一使用轻作底座 AI 对话；复用代理图片模型或官方 API，支持逐图提示词、方案确认、后台批处理与结果保存。需要轻作 0.3.0。",
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-ai-image/releases/download/v0.1.0/official.ai-image-0.1.0-darwin-arm64.ecplugin",
-          "size": 17075,
-          "sha256": "12f2ed0c53c63e11b45ca38ecf1d557d8bd947ac9033763fc8aac0ba9a2135c0",
-          "signature": "hTrIZ8A2iirDsrgPZ0sBLAl/bWTvASu+LWQy81hKMIK7y4hhc4WOGl4eA3NC9e4z87AXOpMN/xp1Q2HOP0IdAA=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-ai-image/releases/download/v0.1.2/official.ai-image-0.1.2-darwin-arm64.ecplugin",
+          "size": 16275,
+          "sha256": "bd2f9946f3cdbe074c42f37b20ec48b8af98d8b793102baebc03dca073bf24aa",
+          "signature": "sYuhiLz29QsIUwPbOVYJSpUbvv7hDQG8hBaDvELD4k7fMx2o+AQ4/VDf+NOiSAIBABMB7aKz0GUCrWpmD7NrCA=="
         },
         "win32-x64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-ai-image/releases/download/v0.1.0/official.ai-image-0.1.0-win32-x64.ecplugin",
-          "size": 17123,
-          "sha256": "5162b91de806d88b8225a3e55d03f3430e14e8c7cf598c34268f166657567ed6",
-          "signature": "60MqqTf08MlM1jdVJSo0RxNkBm5d1RMQVHnJ27UAQnMGZkHlMuN9NKuPohFKUHiV5q4YF/XezfXZX0gNC9wmBw=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-ai-image/releases/download/v0.1.2/official.ai-image-0.1.2-win32-x64.ecplugin",
+          "size": 16331,
+          "sha256": "85460d41c3748092e95dbec74fdbb2d42476bb3b568a5e47ea14d9805ef01a5d",
+          "signature": "x/DitodXKewIONY/atTiebDzAE4wsP1+GUFS1QP/X11K62s7O3i014UXMZQcbA9pbz6goecIrV78aYJL23/6DA=="
         }
       }
     },
