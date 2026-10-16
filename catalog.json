@@ -52,21 +52,21 @@
       "title": "AI 抠图",
       "description": "连接 remove.bg，生成透明背景的商品图片",
       "category": "图片处理",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "api": "^1.1.0",
-      "releaseNotes": "重新抠图前释放旧结果并清空预览，失败或取消时不再显示过期图片。",
+      "releaseNotes": "统一使用轻作品牌绿主题色，保持桌面底座与插件视觉一致。",
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-removebg/releases/download/v0.1.2/official.removebg-0.1.2-darwin-arm64.ecplugin",
-          "size": 5779,
-          "sha256": "564a7cd102d670402c0cb3dafd7e87380aceb0aa0db7a9c2ee5256bb2f8120e4",
-          "signature": "hp7IXktD/Dpk2/79ABy5gKv+XTo+E5gfLD5b8oVFxTtAqpEvPKgop5WNFMrxu6jYvWvmwNqAgwyRCg2McfV+CA=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-removebg/releases/download/v0.1.3/official.removebg-0.1.3-darwin-arm64.ecplugin",
+          "size": 6143,
+          "sha256": "9ee46cbb6904de603fa5f579943d8c0044aec26dd15fb35c33994dc7d6788943",
+          "signature": "zMH8kU3qMJ331s4clhQFDBaEYbSxRfvLDo6b2DRNoh4oNv7wdgMEACRvbrZ+Ht/Go31RPbsDR2bgyrlArkieBg=="
         },
         "win32-x64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-removebg/releases/download/v0.1.2/official.removebg-0.1.2-win32-x64.ecplugin",
-          "size": 5808,
-          "sha256": "9400ac075f745ca69f836d32955186f941bdabb938b5bd2da539613049d0641d",
-          "signature": "2gdavy/RsPy/JAZ98m5UNUJxWekf1xG9GqCfvcBxju6dWpE+n/jsL7ZmVLDzvT4yrcVvnJ+oGsD6sV9VdRPsDw=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-removebg/releases/download/v0.1.3/official.removebg-0.1.3-win32-x64.ecplugin",
+          "size": 6175,
+          "sha256": "b77c1583265c3f139a7eb49d731fe024d8daf7729ad89c72d83e59ab991a4662",
+          "signature": "fRBHSxDPJ+VpLZtQ3arpa5RpiFiOAgOKxQPPFBRhs7aJFBtmqWnqhCYxBFS3AciOxOmjTPJAp+2dC1oeqgmXBw=="
         }
       }
     },
