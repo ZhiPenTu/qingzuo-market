@@ -144,21 +144,21 @@
       "title": "短视频去水印下载",
       "description": "粘贴抖音、快手或蝴蝶号 / 视频号分享链接，解析并保存无水印视频",
       "category": "视频工具",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "api": "^1.2.0",
-      "releaseNotes": "首版支持粘贴分享链接、解析视频信息并通过系统保存对话框保存无水印视频。",
+      "releaseNotes": "修复抖音分享文案中的附加口令解析，切换解析服务并明确提示图文作品不支持视频下载。",
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-video-downloader/releases/download/v0.1.0/official.video-downloader-0.1.0-darwin-arm64.ecplugin",
-          "size": 8137,
-          "sha256": "c8b59be068e4585c3361aeca9bbc5cfc9c1f224b1044b6c3ec57d5762381c9e4",
-          "signature": "8obcN0plIHt55ThGEVSAbYDVXf5EmZSqt24Y5UCxGAQH4C8vp1sEeJsj5Jew6fKs6x+CgFcfmLRlF7QDpaqOBg=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-video-downloader/releases/download/v0.1.1/official.video-downloader-0.1.1-darwin-arm64.ecplugin",
+          "size": 8585,
+          "sha256": "a7eba167034a1588a6dfcb3e26d47fdd10e9c0c65497c861f1cb5ed5e423e114",
+          "signature": "/9gE3Wl9yBcqmadVL+H9w2ltSV4360PXCL0vt5qhvC+7VXnz+UyG8jNeuhn2hDITs1uoVX7ndphK6oTjg8n6Bw=="
         },
         "win32-x64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-video-downloader/releases/download/v0.1.0/official.video-downloader-0.1.0-win32-x64.ecplugin",
-          "size": 8181,
-          "sha256": "7cf31859fe79a60b87d4e56268f2c1f9a598b2ddcebd2d3b2b469b6781464c5b",
-          "signature": "exYCYxR6kXREHDsf2L01wa0ikhf9E2QX6SLchvjDKmuRFGYN9uxhgPku9xozvfdv0HF1xZvBcjorgOieE+c7CA=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-video-downloader/releases/download/v0.1.1/official.video-downloader-0.1.1-win32-x64.ecplugin",
+          "size": 8629,
+          "sha256": "50aca6784b2873cef86281140add5d0dfe7ad88fb8b1da692d11d275c68e184d",
+          "signature": "sBumTUwiOuYyUDPN5UgLa/Ui/i+F3sEiggUQ4so3qL7yR3Ti8NNoSuOS2y2vgW13DBBDM93CL45uHlGemxyiCw=="
         }
       }
     }
