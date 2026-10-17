@@ -4,5 +4,6 @@
   "ZhiPenTu/qingzuo-plugin-ai-image": "official.ai-image",
   "ZhiPenTu/qingzuo-plugin-seedance": "official.seedance",
   "ZhiPenTu/qingzuo-plugin-seedream": "official.seedream",
-  "ZhiPenTu/qingzuo-plugin-seed-audio": "official.seed-audio"
+  "ZhiPenTu/qingzuo-plugin-seed-audio": "official.seed-audio",
+  "ZhiPenTu/qingzuo-plugin-video-downloader": "official.video-downloader"
 }
