@@ -140,6 +140,29 @@
       }
     },
     {
+      "id": "official.shein-full",
+      "title": "希音全托管铺货",
+      "description": "从 1688 采集商品，翻译成英文并生成希音全托管草稿，人工审核确认后才提交发品",
+      "category": "电商工具",
+      "version": "0.1.0",
+      "api": "^1.3.0",
+      "releaseNotes": "首版：1688 商品页结构化采集、图文翻译、图片转存与校验、希音全托管草稿审核与人工确认提交。",
+      "artifacts": {
+        "darwin-arm64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.1.0/official.shein-full-0.1.0-darwin-arm64.ecplugin",
+          "size": 42985,
+          "sha256": "f6a3bb222f5827f60201dcdf455446f8284ffe98227f96165f5da8321ff88687",
+          "signature": "JTC9E9p3jBxFfzjnBTbiqcJBGHl95FSs7yyGQyFJuIVb8A3Cnfela4mQadzXGP7rNayFLEDVJQQh4nHd70R5Dg=="
+        },
+        "win32-x64": {
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.1.0/official.shein-full-0.1.0-win32-x64.ecplugin",
+          "size": 43199,
+          "sha256": "67599cd30750a9c1f80b18d1dfde3290d747f2cfe68485090dcf7d925176b91c",
+          "signature": "uRBwhv/waDCGC/nn1+aTDAQZm7scDdUnpVRebyOj0L55YzHNa6wbn7+VyubLxA6fTvG8E0Tnu7uRyt+XZb9bBQ=="
+        }
+      }
+    },
+    {
       "id": "official.video-downloader",
       "title": "短视频去水印下载",
       "description": "粘贴抖音、快手或蝴蝶号 / 视频号分享链接，解析并保存无水印视频",
