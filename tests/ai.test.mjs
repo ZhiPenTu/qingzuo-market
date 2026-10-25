@@ -22,3 +22,15 @@ test('API 1.2 AI permissions are verified before signing for both platforms', ()
     assert.throws(() => verifyPackage(invalid, entry, platform, 'official.ai-image', keys.privateKey), /AI/);
   }
 });
+
+test('API 1.4 text AI permissions are verified before signing', () => {
+  const keys = generateKeyPairSync('ed25519'), platform = 'darwin-arm64';
+  const descriptor = { version: '0.2.0', commerce: { manifestVersion: 1, id: 'official.shein-full', title: '希音全托管铺货', description: 'Draft publishing', api: '^1.4.0', ui: 'ui/index.html', permissions: { ai: ['image-edit', 'text'] } } };
+  const archive = new AdmZip();
+  archive.addFile('package.json', Buffer.from(JSON.stringify(descriptor)));
+  archive.addFile('ui/index.html', Buffer.from('<h1>希音全托管铺货</h1>'));
+  const bytes = archive.toBuffer();
+  const entry = { ...descriptor.commerce, version: descriptor.version, artifacts: { [platform]: { size: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') } } };
+  const signed = verifyPackage(bytes, entry, platform, descriptor.commerce.id, keys.privateKey);
+  assert.equal(verify(null, bytes, keys.publicKey, Buffer.from(signed.signature, 'base64')), true);
+});
