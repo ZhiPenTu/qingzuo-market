@@ -144,21 +144,21 @@
       "title": "希音全托管铺货",
       "description": "从 1688 采集商品，翻译成英文并生成希音全托管草稿，人工审核确认后才提交发品",
       "category": "电商工具",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "api": "^1.4.0",
-      "releaseNotes": "希音店铺授权改在插件内完成：填好 APP_ID 与 APP_SecretKey 后点「连接希音」，在内嵌浏览器里确认授权，插件自动读回授权结果并保存店铺凭据，不再需要去开放平台复制授权码。",
+      "releaseNotes": "修正正式环境授权回调地址，商家在授权页确认后能正常读回授权结果；授权仍在插件内完成，填好 APP_ID 与 APP_SecretKey 后点「连接希音」即可。",
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.3.0/official.shein-full-0.3.0-darwin-arm64.ecplugin",
-          "size": 49044,
-          "sha256": "d318b4791d69c9741eb969b28576d161cd6bddf628b028fbbccf8aec163662ac",
-          "signature": "dQQQB+RNnwfZwOUczMADRcy9EUIlxjLBm3EcauhnnqQHFEQO1jQ7V1Psn1DJFlJXaeL/pIU3iSPRLabE34VRAg=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.3.1/official.shein-full-0.3.1-darwin-arm64.ecplugin",
+          "size": 49024,
+          "sha256": "d335549db01c2d535199651fb9f2db77fbf66c903ca6ab73d76fd399b1cc3c35",
+          "signature": "LNK/lOf3DzF2HvakSioO3dsGZIEi4rzffbmmetltxTXBN8Qg/q/s61mAc2LMLN3H+kJzeOMoWX2vlFcl+As0BA=="
         },
         "win32-x64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.3.0/official.shein-full-0.3.0-win32-x64.ecplugin",
-          "size": 49277,
-          "sha256": "4cbe7d53b79d5ca25fb7ce9074d946f20b3d8ecfd041508df8c3dd82cc9ef68f",
-          "signature": "mcN2oGEFlu52eEMUbcLXyD/TtIkiK1ZaTmVJN6rhRew6yAoevs71Eg5UKtG8eFFUFVCNRQC6xt/jlsRjIITuCA=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.3.1/official.shein-full-0.3.1-win32-x64.ecplugin",
+          "size": 49257,
+          "sha256": "a8fbcedd1f8b56c4dc5ef17297d259844ffa1685dc8fc1f8f997642195aad482",
+          "signature": "AKhpeOqd0iJOwx013dVlWm76vNZ7i6FVDAtLs3XKEIKkhpcoa17yIYrjuzqtxSe1RX1F7sV/an1+rdeuub19Cw=="
         }
       }
     },
