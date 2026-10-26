@@ -6,6 +6,6 @@ Reviewed plugin catalog for Qingzuo. Only the registered public repositories in 
 
 The private Ed25519 key belongs only in market Secrets and protected operator storage. Published original plugin bytes remain hosted in each plugin Release; the catalog records signatures.
 
-Run npm ci, npm test and npm run validate. The ingestion workflow accepts an optional registered repository and stable tag, then opens a review PR. Merging the PR updates the catalog without rebuilding the desktop.
+Run npm ci, npm test and npm run validate. The ingestion workflow accepts an optional registered repository and stable tag, then updates the catalog automatically after verifying both platform assets. The scheduled workflow therefore requires no review for plugin version updates; only publisher registration changes the reviewed catalog.
 
 The scheduled ingestion path requires no cross-repository credential. Immediate dispatch optionally accepts a token scoped only to Actions write on this repository.

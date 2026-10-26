@@ -1,7 +1,6 @@
-import { readFile, writeFile, mkdtemp, rm } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { createHash, createPrivateKey } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import os from 'node:os';
 import path from 'node:path';
 import semver from 'semver';
 import { verifyPackage } from './verify.mjs';
@@ -33,8 +32,7 @@ for (const repository of repositories) {
   const catalog = JSON.parse(await readFile('catalog.json', 'utf8')), identity = publishers[repository];
   const existing = catalog.plugins.find(entry => entry.id === identity), version = release.tag_name.slice(1);
   if (existing && !semver.gt(version, existing.version)) continue;
-  const branch = 'market/' + identity + '-' + version;
-  if (command('gh', ['pr', 'list', '--head', branch, '--state', 'open', '--json', 'number']) !== '[]') continue;
+  const mainCommit = command('git', ['rev-parse', 'origin/main']);
   let result;
   for (const platform of ['darwin-arm64', 'win32-x64']) {
     const fragment = release.assets.find(asset => asset.name === 'catalog-' + platform + '.json');
@@ -53,17 +51,11 @@ for (const repository of repositories) {
   }
   catalog.plugins = [...catalog.plugins.filter(entry => entry.id !== identity), result].sort((left, right) => left.id.localeCompare(right.id));
   validateCatalog(catalog);
-  command('git', ['checkout', '-B', branch]);
+  command('git', ['checkout', '-B', 'market-ingest-publish', 'origin/main']);
   await writeFile('catalog.json', JSON.stringify(catalog, null, 2) + '\n');
   command('git', ['config', 'user.name', 'qingzuo-market']);
   command('git', ['config', 'user.email', 'qingzuo-market@users.noreply.github.com']);
   command('git', ['add', 'catalog.json']);
   command('git', ['commit', '-m', 'market: ' + identity + ' ' + version]);
-  command('git', ['push', '--force-with-lease', 'origin', branch]);
-  const temporary = await mkdtemp(path.join(os.tmpdir(), 'qingzuo-market-pr-'));
-  try {
-    const body = path.join(temporary, 'body.md');
-    await writeFile(body, 'Publish ' + identity + ' ' + version + '.\n\nBoth platform assets were verified against GitHub release digests, inspected without executing plugin code, and signed by the market.\n');
-    console.log(command('gh', ['pr', 'create', '--base', 'main', '--head', branch, '--title', 'Publish ' + identity + ' ' + version, '--body-file', body]));
-  } finally { await rm(temporary, { recursive: true, force: true }); }
+  command('git', ['push', '--force-with-lease=refs/heads/main:' + mainCommit, 'origin', 'market-ingest-publish:main']);
 }
