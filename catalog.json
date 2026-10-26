@@ -144,21 +144,21 @@
       "title": "希音全托管铺货",
       "description": "从 1688 采集商品，翻译成英文并生成希音全托管草稿，人工审核确认后才提交发品",
       "category": "电商工具",
-      "version": "0.3.5",
+      "version": "0.3.6",
       "api": "^1.4.0",
-      "releaseNotes": "修正全托管店铺的正式接口域名，请重新连接希音店铺。",
+      "releaseNotes": "修复全托管店铺的授权回调页面，请重新连接希音店铺。",
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.3.5/official.shein-full-0.3.5-darwin-arm64.ecplugin",
-          "size": 51065,
-          "sha256": "df2354b31e8d75038096b6b119ca9d9f3a183e7886af9798aa3d05cf3c47b6f3",
-          "signature": "gfeggZcH21qxZFm6W+pzcG6M/BszNyTamoc16BtxFZhG/sTUZphKFwzEvxRwbrDNWrCSrxX++uoM9cYBk201CQ=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.3.6/official.shein-full-0.3.6-darwin-arm64.ecplugin",
+          "size": 51083,
+          "sha256": "9b5d9c710482054b8eaebb61a7dbf21d7b006e08103cf2f8124aa09ca30462b1",
+          "signature": "o8S0LTaSNAYHJjE3Cl3QMMMv+g6/u4H119yZUxbXV6ztwzgBTRXH948bsWVj49lyMCfVH8PAuiCLmYT/ASzDCg=="
         },
         "win32-x64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.3.5/official.shein-full-0.3.5-win32-x64.ecplugin",
-          "size": 51306,
-          "sha256": "ae8f1c93522927ccf5b2da22c3941e0bbbec32660d20cd202a5c301ba222ef30",
-          "signature": "jo/Azq7jtGk3dMeJEfDC1b/Pi0Osqv2uyxPhAsOBJGFFbmbcOXAKtAD5oyLEujdt73Nj5W7cvSAo1vuLvbY+AA=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.3.6/official.shein-full-0.3.6-win32-x64.ecplugin",
+          "size": 51325,
+          "sha256": "23ff3edfcd78923b576254387bfc696ed7bc68722367de2311d1579d6a9e5f76",
+          "signature": "+nGzAZc9PickvXgC3xvtBdsLbjacGC5z4pCcrUPEhZAKJWrs1i+p+MzukSKV93BpvWijSus/2/aq5KKT5cXBDg=="
         }
       }
     },
