@@ -144,21 +144,21 @@
       "title": "希音全托管铺货",
       "description": "从 1688 采集商品，翻译成英文并生成希音全托管草稿，人工审核确认后才提交发品",
       "category": "电商工具",
-      "version": "0.3.8",
-      "api": "^1.4.0",
-      "releaseNotes": "新增商品图片大图查看器、原图/译文滑杆对比与图内文字翻译能力，优化图片工作区与窄屏分栏排版。",
+      "version": "0.4.0",
+      "api": "^1.5.0",
+      "releaseNotes": "「翻译」改为 AI 爆款标题弹窗：结合商品主图与 1688 信息，按主推、SEO 长尾、精简稳妥三种策略各给一条带字符数的候选，选定后写入草稿，另可一键按原文直译。",
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.3.8/official.shein-full-0.3.8-darwin-arm64.ecplugin",
-          "size": 61442,
-          "sha256": "68d9ad1a27907805c1c19caea5bd30c6c129a1a3409a5a2de85bb01cbb2953a0",
-          "signature": "bo9F9i2ZgsiW4e2vJGU7JVbprjHYsSNhxE39cdrokgdTKURuYYICCEZwu8OhUKaiKkrdJFbDz23BYdVbyqCzDQ=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.4.0/official.shein-full-0.4.0-darwin-arm64.ecplugin",
+          "size": 68756,
+          "sha256": "ae724a0c3044578ee1f17b9b2f93ec3d8be07850aa5a23f688d56efef0b27dc5",
+          "signature": "od/lMpOoOZRgIjVzkDgCEXuoJdqUSpmEl1S3OW8YCy9c40vG/3oSJfeWwtInUqABjsC0QYq7wiS9yGsQY0pzBA=="
         },
         "win32-x64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.3.8/official.shein-full-0.3.8-win32-x64.ecplugin",
-          "size": 61749,
-          "sha256": "ab6d049faa9636316b44e6e45e2ed90c44d19dd3b48adda6b9d643d4a9df435e",
-          "signature": "XBrCEG73kts2vDKSL3maia03aASpQTLBzSRd6o1w7D74bn7kKk/liYyrYIwhMHKHEL9PknAMZgpsEY2EnYosDQ=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.4.0/official.shein-full-0.4.0-win32-x64.ecplugin",
+          "size": 69064,
+          "sha256": "40dfc946b5daef5e23c7f0f33c7a2053e499e37487865ff1ee4aebd58097697d",
+          "signature": "jKat3VsP9FeumIXDyDfAogx6c8JfQ55EOoBT/Idkq/4HUmgs/8J3ZHhKwfEbx2Ov8JEaTDG2pLPeNN6Pry2mAg=="
         }
       }
     },
