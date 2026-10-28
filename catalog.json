@@ -144,21 +144,21 @@
       "title": "希音全托管铺货",
       "description": "从 1688 采集商品，翻译成英文并生成希音全托管草稿，人工审核确认后才提交发品",
       "category": "电商工具",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "api": "^1.5.0",
-      "releaseNotes": "「翻译」改为 AI 爆款标题弹窗：结合商品主图与 1688 信息，按主推、SEO 长尾、精简稳妥三种策略各给一条带字符数的候选，选定后写入草稿，另可一键按原文直译。",
+      "releaseNotes": "1688 变体采集更完整：颜色与规格分列读取，支持跨行合并的规格表和卡片式变体，SKU 上限提升到 200 条，并带上库存与货号；供货价可直接修改，手动价优先，也可一键按系数重算；采集前先确认 1688 登录状态，未登录时停在首页等待登录，不再先加载商品页。",
       "artifacts": {
         "darwin-arm64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.4.0/official.shein-full-0.4.0-darwin-arm64.ecplugin",
-          "size": 68756,
-          "sha256": "ae724a0c3044578ee1f17b9b2f93ec3d8be07850aa5a23f688d56efef0b27dc5",
-          "signature": "od/lMpOoOZRgIjVzkDgCEXuoJdqUSpmEl1S3OW8YCy9c40vG/3oSJfeWwtInUqABjsC0QYq7wiS9yGsQY0pzBA=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.4.1/official.shein-full-0.4.1-darwin-arm64.ecplugin",
+          "size": 73944,
+          "sha256": "704bc2202c626b8d95ff6213ce9070e3703d5fa468c7fd61b0a3852bf095c6d3",
+          "signature": "3JhqyM6+RUKUCfFDQqtBZG14g33ZUC55GKeJAUy6Z8590Hny7MtA2Z4KL73WQ2mZIa0HWAsZ8oZq327YXwEMAg=="
         },
         "win32-x64": {
-          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.4.0/official.shein-full-0.4.0-win32-x64.ecplugin",
-          "size": 69064,
-          "sha256": "40dfc946b5daef5e23c7f0f33c7a2053e499e37487865ff1ee4aebd58097697d",
-          "signature": "jKat3VsP9FeumIXDyDfAogx6c8JfQ55EOoBT/Idkq/4HUmgs/8J3ZHhKwfEbx2Ov8JEaTDG2pLPeNN6Pry2mAg=="
+          "url": "https://github.com/ZhiPenTu/qingzuo-plugin-shein-full/releases/download/v0.4.1/official.shein-full-0.4.1-win32-x64.ecplugin",
+          "size": 74294,
+          "sha256": "a203acae0660d5b952dcda0f9323fb251048c003cbba56d76d8fb8e053700e45",
+          "signature": "H5GEy2zHS41FlRnEh9oMCUPcR1rMsolDBLEVuDssmDg39BpQAqZEpnG7uXG5FF/5S3LVqxNUc39KRLs/aoTsCQ=="
         }
       }
     },
