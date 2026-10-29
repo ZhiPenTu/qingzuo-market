@@ -45,7 +45,7 @@ for (const repository of repositories) {
     const bytes = await download(expected, 512 * 1024 ** 2);
     if (createHash('sha256').update(bytes).digest('hex') !== asset.digest.slice(7)) throw new Error('GitHub asset digest mismatch.');
     const artifact = verifyPackage(bytes, entry, platform, identity, key);
-    const metadata = Object.fromEntries(['id', 'title', 'description', 'category', 'version', 'api', 'releaseNotes'].map(field => [field, entry[field]]));
+    const metadata = Object.fromEntries(['id', 'title', 'description', 'category', 'version', 'api', 'releaseNotes', 'icon'].map(field => [field, entry[field]]));
     if (result && JSON.stringify(metadata) !== JSON.stringify(Object.fromEntries(Object.keys(metadata).map(field => [field, result[field]])))) throw new Error('Platform metadata mismatch.');
     result = { ...metadata, ...(existing?.stats ? { stats: existing.stats } : {}), artifacts: { ...result?.artifacts, [platform]: artifact } };
   }
