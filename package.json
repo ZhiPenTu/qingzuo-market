@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "validate": "node scripts/validate.mjs",
-    "ingest": "node scripts/ingest.mjs"
+    "ingest": "node scripts/ingest.mjs",
+    "downloads": "node scripts/update-downloads.mjs"
   },
   "dependencies": {
     "@commerce/plugin-sdk": "https://github.com/ZhiPenTu/qingzuo-desktop/releases/download/sdk-v1.5.0/commerce-plugin-sdk-1.5.0.tgz",

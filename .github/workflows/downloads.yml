@@ -1,0 +1,36 @@
+name: Refresh plugin downloads
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: market-catalog-write
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test && npm run validate
+      - name: Refresh cumulative GitHub downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: npm run downloads
+      - name: Commit catalog changes
+        run: |
+          if git diff --quiet -- catalog.json; then
+            echo "Download counts are unchanged."
+            exit 0
+          fi
+          git config user.name "qingzuo-market"
+          git config user.email "qingzuo-market@users.noreply.github.com"
+          git add catalog.json
+          git commit -m "market: refresh plugin downloads"
+          git push origin HEAD:main

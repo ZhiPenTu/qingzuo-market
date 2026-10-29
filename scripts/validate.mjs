@@ -5,6 +5,7 @@ export function validateCatalog(value) {
   const identities = new Set();
   for (const entry of value.plugins) {
     if (!/^[a-z][a-z0-9]*(?:[.-][a-z0-9]+)+$/.test(entry.id) || entry.id.startsWith('system.') || identities.has(entry.id) || !semver.valid(entry.version) || !semver.validRange(entry.api) || typeof entry.title !== 'string' || !entry.title || entry.title.length > 80 || typeof entry.description !== 'string' || entry.description.length > 2000 || typeof entry.releaseNotes !== 'string' || entry.releaseNotes.length > 64000) throw new Error('Invalid plugin entry.');
+    if (entry.stats !== undefined && (!entry.stats || typeof entry.stats !== 'object' || Array.isArray(entry.stats) || entry.stats.downloads !== undefined && (!Number.isSafeInteger(entry.stats.downloads) || entry.stats.downloads < 0))) throw new Error('Invalid plugin stats.');
     identities.add(entry.id);
     for (const platform of ['darwin-arm64', 'win32-x64']) {
       const artifact = entry.artifacts?.[platform], url = artifact && new URL(artifact.url);

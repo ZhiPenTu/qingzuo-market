@@ -22,6 +22,9 @@
           "sha256": "85460d41c3748092e95dbec74fdbb2d42476bb3b568a5e47ea14d9805ef01a5d",
           "signature": "x/DitodXKewIONY/atTiebDzAE4wsP1+GUFS1QP/X11K62s7O3i014UXMZQcbA9pbz6goecIrV78aYJL23/6DA=="
         }
+      },
+      "stats": {
+        "downloads": 19
       }
     },
     {
@@ -45,6 +48,9 @@
           "sha256": "3861cd026f03efe72f2cc8e5c6fd2144110fbe282a4c9edaf25387369f1149ff",
           "signature": "iVNf9l+zP2IA4BNRjfADJ3Hub4b7LmJDOnIqMEfdtvoWvzFvnmUTTG7/3vVxzx1aU4ZiX4knKXlO/eM5fiy1Ag=="
         }
+      },
+      "stats": {
+        "downloads": 21
       }
     },
     {
@@ -68,6 +74,9 @@
           "sha256": "b77c1583265c3f139a7eb49d731fe024d8daf7729ad89c72d83e59ab991a4662",
           "signature": "fRBHSxDPJ+VpLZtQ3arpa5RpiFiOAgOKxQPPFBRhs7aJFBtmqWnqhCYxBFS3AciOxOmjTPJAp+2dC1oeqgmXBw=="
         }
+      },
+      "stats": {
+        "downloads": 28
       }
     },
     {
@@ -91,6 +100,9 @@
           "sha256": "feb29e963c878ff4b61a7041455b6d44a628444df1d942c6084a8adab2771963",
           "signature": "YBzaev5BW4rjkHBozgwNhHHeN85vzlg0xMp6aByUaxiJ8pvJjhv+0Hs4vU7kwPUwP5/bvMtHsViSVeplycmmCw=="
         }
+      },
+      "stats": {
+        "downloads": 3
       }
     },
     {
@@ -114,6 +126,9 @@
           "sha256": "79603da9fe15aacd5d711022a100a84fa2338e93c23d37380739f42649ab1a18",
           "signature": "WZ6ZqEs141sgTsA5c2OjZc6CNqVhPVIqYtrSCWJorrCpI93xFbND6F6qTRKAW06gRDgyxj5oP1lr4EPLNB5QDw=="
         }
+      },
+      "stats": {
+        "downloads": 4
       }
     },
     {
@@ -137,6 +152,9 @@
           "sha256": "83e7d65bd156912842a1225f23213a19bebce9ef5d6720bc430ea643dd9aa01b",
           "signature": "4FjYQEh4JeXeft/gjrpvTl4iZtbGtC70E90U5gY1JpU7WxisZSBHRDcgQNlbh8jK9iykA7kbigbcSnRHO1zSDQ=="
         }
+      },
+      "stats": {
+        "downloads": 4
       }
     },
     {
@@ -160,6 +178,9 @@
           "sha256": "a203acae0660d5b952dcda0f9323fb251048c003cbba56d76d8fb8e053700e45",
           "signature": "H5GEy2zHS41FlRnEh9oMCUPcR1rMsolDBLEVuDssmDg39BpQAqZEpnG7uXG5FF/5S3LVqxNUc39KRLs/aoTsCQ=="
         }
+      },
+      "stats": {
+        "downloads": 48
       }
     },
     {
@@ -183,6 +204,9 @@
           "sha256": "f2bcb1174934c1d3559b2bb8e0ae979cb7d990a1ea13dbe084470837710718c3",
           "signature": "RAV7SIvp8xXGkrldUq2k+zIDUzoY0BgS31KapQUdYL7z8LxuN/2vMHbTBwmakUUCbChPcYTCejmmf4fjpEtqDA=="
         }
+      },
+      "stats": {
+        "downloads": 12
       }
     }
   ]

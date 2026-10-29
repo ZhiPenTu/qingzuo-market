@@ -16,7 +16,7 @@ permissions:
   contents: write
   pull-requests: write
 concurrency:
-  group: market-ingest
+  group: market-catalog-write
   cancel-in-progress: false
 jobs:
   review:

@@ -47,7 +47,7 @@ for (const repository of repositories) {
     const artifact = verifyPackage(bytes, entry, platform, identity, key);
     const metadata = Object.fromEntries(['id', 'title', 'description', 'category', 'version', 'api', 'releaseNotes'].map(field => [field, entry[field]]));
     if (result && JSON.stringify(metadata) !== JSON.stringify(Object.fromEntries(Object.keys(metadata).map(field => [field, result[field]])))) throw new Error('Platform metadata mismatch.');
-    result = { ...metadata, artifacts: { ...result?.artifacts, [platform]: artifact } };
+    result = { ...metadata, ...(existing?.stats ? { stats: existing.stats } : {}), artifacts: { ...result?.artifacts, [platform]: artifact } };
   }
   catalog.plugins = [...catalog.plugins.filter(entry => entry.id !== identity), result].sort((left, right) => left.id.localeCompare(right.id));
   validateCatalog(catalog);

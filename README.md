@@ -9,3 +9,5 @@ The private Ed25519 key belongs only in market Secrets and protected operator st
 Run npm ci, npm test and npm run validate. The ingestion workflow accepts an optional registered repository and stable tag, then updates the catalog automatically after verifying both platform assets. The scheduled workflow therefore requires no review for plugin version updates; only publisher registration changes the reviewed catalog.
 
 The scheduled ingestion path requires no cross-repository credential. Immediate dispatch optionally accepts a token scoped only to Actions write on this repository.
+
+The downloads workflow refreshes the optional `stats.downloads` catalog field every six hours from stable `vX.Y.Z` Release assets. The value is a cumulative GitHub asset download count for both supported platforms, not a unique-user or successful-install metric.
