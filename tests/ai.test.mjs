@@ -34,3 +34,15 @@ test('API 1.4 text AI permissions are verified before signing', () => {
   const signed = verifyPackage(bytes, entry, platform, descriptor.commerce.id, keys.privateKey);
   assert.equal(verify(null, bytes, keys.publicKey, Buffer.from(signed.signature, 'base64')), true);
 });
+
+test('API 1.6 shared image permission is verified before signing', () => {
+  const keys = generateKeyPairSync('ed25519'), platform = 'darwin-arm64';
+  const descriptor = { version: '0.2.0', commerce: { manifestVersion: 1, id: 'official.ai-image', title: 'AI 批图', description: 'Batch image generation', api: '^1.6.0', ui: 'ui/index.html', permissions: { files: true, ai: ['image-edit'] } } };
+  const archive = new AdmZip();
+  archive.addFile('package.json', Buffer.from(JSON.stringify(descriptor)));
+  archive.addFile('ui/index.html', Buffer.from('<h1>AI 批图</h1>'));
+  const bytes = archive.toBuffer();
+  const entry = { ...descriptor.commerce, version: descriptor.version, artifacts: { [platform]: { size: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') } } };
+  const signed = verifyPackage(bytes, entry, platform, descriptor.commerce.id, keys.privateKey);
+  assert.equal(verify(null, bytes, keys.publicKey, Buffer.from(signed.signature, 'base64')), true);
+});

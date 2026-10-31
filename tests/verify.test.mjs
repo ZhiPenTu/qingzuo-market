@@ -28,7 +28,7 @@ test('market binds a plugin-provided PNG icon to the signed package and catalog 
   invalidZip.addFile('package.json', Buffer.from(JSON.stringify({ version: '0.1.0', commerce: { manifestVersion: 1, id: 'official.fixture', title: 'Fixture', description: '', api: '^1.1.0', ui: 'ui/index.html', icon: invalid, permissions: {} } })));
   invalidZip.addFile('ui/index.html', Buffer.from('<h1>Fixture</h1>'));
   const invalidBytes = invalidZip.toBuffer(), invalidEntry = { ...entry, icon: invalid, artifacts: { [platform]: { size: invalidBytes.length, sha256: createHash('sha256').update(invalidBytes).digest('hex') } } };
-  assert.throws(() => verifyPackage(invalidBytes, invalidEntry, platform, entry.id, keys.privateKey), /icon/);
+  assert.throws(() => verifyPackage(invalidBytes, invalidEntry, platform, entry.id, keys.privateKey), /图标|icon/);
 });
 
 test('market rejects traversal, symlinks, duplicate paths, missing UI and unsupported backend targets', () => {
