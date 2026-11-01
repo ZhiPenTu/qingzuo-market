@@ -1,4 +1,4 @@
-name: Review plugin releases
+name: Verify plugin releases
 on:
   workflow_dispatch:
     inputs:
@@ -13,8 +13,7 @@ on:
   schedule:
     - cron: '7,37 * * * *'
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 concurrency:
   group: market-catalog-write
   cancel-in-progress: false
@@ -29,10 +28,9 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm test && npm run validate
-      - name: Verify, sign and propose catalog changes
+      - name: Verify registered releases
         env:
           GH_TOKEN: ${{ github.token }}
-          COMMERCE_PLUGIN_SIGNING_KEY: ${{ secrets.COMMERCE_PLUGIN_SIGNING_KEY }}
           PLUGIN_REPOSITORY: ${{ inputs.repository }}
           PLUGIN_TAG: ${{ inputs.tag }}
-        run: npm run ingest
+        run: npm run verify:release

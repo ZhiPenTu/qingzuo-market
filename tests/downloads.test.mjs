@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { applyCatalogDownloads, sumReleaseDownloads } from '../scripts/update-downloads.mjs';
-import { validateCatalog } from '../scripts/validate.mjs';
+import { validateCatalog, validatePublisherCatalog } from '../scripts/validate.mjs';
 
 function release(tag, assets, overrides = {}) {
   return { tag_name: tag, draft: false, prerelease: false, assets, ...overrides };
@@ -73,10 +73,26 @@ test('catalog validation accepts optional download stats and rejects invalid val
     description: '',
     api: '^1.0.0',
     releaseNotes: '',
+    source: { type: 'github-release', repository: 'owner/fixture' },
     artifacts: { 'darwin-arm64': artifact, 'win32-x64': artifact },
   };
   assert.doesNotThrow(() => validateCatalog({ schemaVersion: 1, plugins: [{ ...entry, stats: { downloads: 31_000 } }] }));
   for (const downloads of [-1, 1.5, '31K', Number.MAX_SAFE_INTEGER + 1]) {
     assert.throws(() => validateCatalog({ schemaVersion: 1, plugins: [{ ...entry, stats: { downloads } }] }));
   }
+});
+
+test('catalog sources must be valid and match the registered publisher', () => {
+  const entry = {
+    id: 'official.fixture',
+    version: '0.1.0',
+    title: 'Fixture',
+    description: '',
+    source: { type: 'github-release', repository: 'owner/fixture' },
+  };
+  const catalog = { schemaVersion: 1, plugins: [entry] };
+  assert.doesNotThrow(() => validatePublisherCatalog(catalog, { 'owner/fixture': 'official.fixture' }));
+  assert.throws(() => validatePublisherCatalog(catalog, { 'owner/other': 'official.fixture' }), /not registered/);
+  assert.throws(() => validateCatalog({ schemaVersion: 1, plugins: [{ ...entry, source: { type: 'zip', repository: 'owner/fixture' } }] }), /source/);
+  assert.throws(() => validateCatalog({ schemaVersion: 1, plugins: [{ ...entry, source: { type: 'github-release', repository: 'owner/..' } }] }), /source/);
 });
