@@ -26,6 +26,10 @@
           "sha256": "1c81179b79870f8ba1c5363b3b101c0a40b41f98cb2bcfcddac6ed7bd0dfd75f",
           "signature": "6pIy6+q7rMWG3Of6EEbSFUOx6vHHtsqpWGIu8MS/oDvJwMw9f0RfFBmU3a5Hv/g2pDtpKHNp/+jL6GYFSURWCA=="
         }
+      },
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-ai-image"
       }
     },
     {
@@ -53,6 +57,10 @@
           "sha256": "50020c52b4523a9a67ccca4f7d9975cf46096be9329c8abaa7eba903ea267921",
           "signature": "/prDHKdKwstwzYlNeyp2iLJOn/Qcp+cXQMgL3/mm+m1FIJ7kQ/LjPFbEUABBeUYW2CX6th4YqKuFyyGmwS3hAg=="
         }
+      },
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-labeledit"
       }
     },
     {
@@ -80,6 +88,10 @@
           "sha256": "5ce75ab01fd360ab8c31a7d0df1321ac4d504f6ce3b92ee278d3a7bc09d9bbb9",
           "signature": "EETYwTSJ3NMllYQ2jiqxpzwh9h0dPKYWOGFatuDdSAOuOrBT1Qdoc8hW65HR1rBqzzR7kRfxARHfGRsc0sLaBw=="
         }
+      },
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-removebg"
       }
     },
     {
@@ -107,6 +119,10 @@
           "sha256": "86296319fbdc3c10ae3f19d4b19bc40c59f916b035812bf96ab39e6322de622e",
           "signature": "AjlqZLPFJkZ26CLxhx3pTSf7VJLhOFRGAzjujC+Gc04gQ60RvdNcZxPPuDbnPT7rd/ymQD/mPc3ljOZ/zs73CA=="
         }
+      },
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-seed-audio"
       }
     },
     {
@@ -134,6 +150,10 @@
           "sha256": "33600035109aa292fd71c77ea2e41624f879234a06dd3bf021596902d0bd7362",
           "signature": "f9idN8oXBMkizvcap6bKnFpuznS3dzCisIx2d4DXHeKD8ZtR6UHPVT7tQbyW5y6Z9OgpruhmuzRt4yEEzQDxDg=="
         }
+      },
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-seedance"
       }
     },
     {
@@ -161,6 +181,10 @@
           "sha256": "992e148836cf1e6b89f2f8b4dee5b0a712e33efaa5705784710bcb644ddcbebe",
           "signature": "6x47idn+XMGyzoMmlIdL+4GARQQYVEp9PEIUdgU4Y3Ubi1j+4SRfil5sbj75qrypSpMtIC0gLX1LbmQUhxE2AQ=="
         }
+      },
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-seedream"
       }
     },
     {
@@ -188,6 +212,10 @@
           "sha256": "cb6c9673bd69d3fa342cf3ddd6082dc3329755488fe24643e2a8bd52b7152ac9",
           "signature": "dJAzU3R+upkvIDaSiDLWK+hFHXbG0oSibPIE4q/J4/O0EbYhLs5FUDM8HQAwE3s+T+yk351s1H1sxmb2iz0nCg=="
         }
+      },
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-shein-full"
       }
     },
     {
@@ -215,6 +243,10 @@
           "sha256": "51a2a7390e3345b0536ab10e3d734519e0effd036d34361b6fa7f845bef16369",
           "signature": "u4FmwdjEud8OA1hrIlPrmxfLiMK9ApneUr3Jhl6CuRvNoMg9RvXEXsZFP1dtQSE8hcjXV9lzMlg5USVspmQGAg=="
         }
+      },
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-video-downloader"
       }
     }
   ]
