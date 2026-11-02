@@ -33,6 +33,19 @@
       }
     },
     {
+      "id": "official.downloader",
+      "title": "文件下载器",
+      "description": "检测公开下载链接的断点续传能力，使用多线程加速并在重启后继续未完成任务",
+      "category": "文件工具",
+      "version": "0.1.0",
+      "api": "^1.8.0",
+      "releaseNotes": "首个版本：支持下载能力检测、多线程下载、全局保存位置、任务暂停与重启续传。",
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-downloader"
+      }
+    },
+    {
       "id": "official.labeledit",
       "title": "LabelEdit",
       "description": "本地 PDF 标签编辑、文字识别与导出",
