@@ -6,5 +6,6 @@
   "ZhiPenTu/qingzuo-plugin-seedream": "official.seedream",
   "ZhiPenTu/qingzuo-plugin-seed-audio": "official.seed-audio",
   "ZhiPenTu/qingzuo-plugin-video-downloader": "official.video-downloader",
-  "ZhiPenTu/qingzuo-plugin-shein-full": "official.shein-full"
+  "ZhiPenTu/qingzuo-plugin-shein-full": "official.shein-full",
+  "ZhiPenTu/qingzuo-plugin-downloader": "official.downloader"
 }
