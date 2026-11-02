@@ -1,6 +1,6 @@
 # Qingzuo market
 
-The verifier uses SDK 1.6.0 from the immutable sdk-v1.6.0 Release tarball, pinned with lockfile integrity. Runtime compatibility is API 1.6.0; existing API 1.0-1.5 plugins remain compatible. Shared image capability requires Qingzuo 0.6.12 and explicit permissions validated by the SDK.
+The verifier uses SDK 1.8.0 from the immutable sdk-v1.8.0 Release tarball, pinned with lockfile integrity. Runtime compatibility is API 1.8.0; existing API 1.0-1.7 plugins remain compatible. Shared credentials require Qingzuo 0.6.20, and host-managed downloads require Qingzuo 0.6.21 plus an explicit `downloads` permission validated by the SDK.
 
 Reviewed plugin catalog for Qingzuo. Only the registered public repositories in publishers.json may appear in the catalog. Each catalog entry records a stable `source`; the desktop client reads the plugin's latest stable Release manifest directly, so publishing a plugin update does not require a market catalog commit.
 
