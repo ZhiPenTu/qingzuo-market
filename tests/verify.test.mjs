@@ -54,3 +54,37 @@ test('market rejects traversal, symlinks, duplicate paths, missing UI and unsupp
   assert.throws(() => check(missing.toBuffer()));
   assert.throws(() => check(fixture({ backend: { type: 'executable', entry: { 'win32-x64': 'backend/run.exe' } } }).toBuffer()));
 });
+
+test('API 1.7 shared credential permission is verified before signing', () => {
+  const keys = generateKeyPairSync('ed25519'), platform = 'darwin-arm64';
+  function fixture(credentialVault) {
+    const zip = new AdmZip();
+    zip.addFile('package.json', Buffer.from(JSON.stringify({
+      version: '0.1.0',
+      commerce: {
+        manifestVersion: 1,
+        id: 'official.fixture',
+        title: 'Fixture',
+        description: '',
+        api: '^1.7.0',
+        ui: 'ui/index.html',
+        permissions: { credentialVault },
+      },
+    })));
+    zip.addFile('ui/index.html', Buffer.from('<h1>Fixture</h1>'));
+    return zip.toBuffer();
+  }
+  function check(bytes) {
+    const entry = {
+      id: 'official.fixture',
+      version: '0.1.0',
+      title: 'Fixture',
+      description: '',
+      api: '^1.7.0',
+      artifacts: { [platform]: { size: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') } },
+    };
+    return verifyPackage(bytes, entry, platform, entry.id, keys.privateKey);
+  }
+  assert.ok(check(fixture('manage')).signature);
+  assert.throws(() => check(fixture('admin')), /共享凭证/);
+});
