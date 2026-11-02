@@ -33,6 +33,19 @@
       }
     },
     {
+      "id": "official.credentials",
+      "title": "凭证管理",
+      "description": "统一保存各工具的 AppID 与密钥，按需授权给其他工具使用",
+      "category": "效率工具",
+      "version": "0.1.0",
+      "api": "^1.7.0",
+      "releaseNotes": "首个版本：集中保存 AppID 与密钥，支持多条凭证、生产/沙箱环境、工具授权与撤销。",
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-credentials"
+      }
+    },
+    {
       "id": "official.downloader",
       "title": "文件下载器",
       "description": "检测公开下载链接的断点续传能力，使用多线程加速并在重启后继续未完成任务",
