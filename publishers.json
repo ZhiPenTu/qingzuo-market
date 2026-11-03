@@ -48,6 +48,10 @@
     "ZhiPenTu/qingzuo-plugin-diagnostics": {
       "id": "official.diagnostics",
       "tier": "official"
+    },
+    "ZhiPenTu/qingzuo-plugin-wechat-studio": {
+      "id": "official.wechat-studio",
+      "tier": "official"
     }
   }
 }
