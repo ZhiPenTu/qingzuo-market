@@ -1,12 +1,45 @@
 {
-  "ZhiPenTu/qingzuo-plugin-labeledit": "official.labeledit",
-  "ZhiPenTu/qingzuo-plugin-removebg": "official.removebg",
-  "ZhiPenTu/qingzuo-plugin-ai-image": "official.ai-image",
-  "ZhiPenTu/qingzuo-plugin-seedance": "official.seedance",
-  "ZhiPenTu/qingzuo-plugin-seedream": "official.seedream",
-  "ZhiPenTu/qingzuo-plugin-seed-audio": "official.seed-audio",
-  "ZhiPenTu/qingzuo-plugin-video-downloader": "official.video-downloader",
-  "ZhiPenTu/qingzuo-plugin-shein-full": "official.shein-full",
-  "ZhiPenTu/qingzuo-plugin-credentials": "official.credentials",
-  "ZhiPenTu/qingzuo-plugin-downloader": "official.downloader"
+  "schemaVersion": 2,
+  "publishers": {
+    "ZhiPenTu/qingzuo-plugin-labeledit": {
+      "id": "official.labeledit",
+      "tier": "official"
+    },
+    "ZhiPenTu/qingzuo-plugin-removebg": {
+      "id": "official.removebg",
+      "tier": "official"
+    },
+    "ZhiPenTu/qingzuo-plugin-ai-image": {
+      "id": "official.ai-image",
+      "tier": "official"
+    },
+    "ZhiPenTu/qingzuo-plugin-seedance": {
+      "id": "official.seedance",
+      "tier": "official"
+    },
+    "ZhiPenTu/qingzuo-plugin-seedream": {
+      "id": "official.seedream",
+      "tier": "official"
+    },
+    "ZhiPenTu/qingzuo-plugin-seed-audio": {
+      "id": "official.seed-audio",
+      "tier": "official"
+    },
+    "ZhiPenTu/qingzuo-plugin-video-downloader": {
+      "id": "official.video-downloader",
+      "tier": "official"
+    },
+    "ZhiPenTu/qingzuo-plugin-shein-full": {
+      "id": "official.shein-full",
+      "tier": "official"
+    },
+    "ZhiPenTu/qingzuo-plugin-credentials": {
+      "id": "official.credentials",
+      "tier": "platform"
+    },
+    "ZhiPenTu/qingzuo-plugin-downloader": {
+      "id": "official.downloader",
+      "tier": "platform"
+    }
+  }
 }
