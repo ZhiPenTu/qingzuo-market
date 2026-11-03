@@ -300,6 +300,36 @@
         "type": "github-release",
         "repository": "ZhiPenTu/qingzuo-plugin-video-downloader"
       }
+    },
+    {
+      "id": "official.ai-assistant",
+      "tier": "official",
+      "official": true,
+      "title": "AI 助手",
+      "description": "在独立插件界面中使用轻作共享 AI 服务完成对话、模型选择与设置",
+      "category": "效率工具",
+      "version": "0.1.1",
+      "api": "^1.10.0",
+      "releaseNotes": "首个独立界面版本：历史会话、对话与工具列表、文本模型选择和测试、共享图像服务状态与模型目录。修复双平台安装包与版本信息不一致的问题，确保各平台获取正确制品。",
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-ai-assistant"
+      }
+    },
+    {
+      "id": "official.diagnostics",
+      "tier": "official",
+      "official": true,
+      "title": "日志调试",
+      "description": "查看轻作、插件与浏览器的调试日志，支持按范围和级别筛选。",
+      "category": "开发工具",
+      "version": "0.1.1",
+      "api": "^1.10.0",
+      "releaseNotes": "首个版本：查看、筛选和实时刷新轻作调试日志。修复双平台安装包与版本信息不一致的问题，确保各平台获取正确制品。",
+      "source": {
+        "type": "github-release",
+        "repository": "ZhiPenTu/qingzuo-plugin-diagnostics"
+      }
     }
   ]
 }
