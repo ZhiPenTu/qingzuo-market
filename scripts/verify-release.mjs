@@ -19,6 +19,7 @@ const FRAGMENT_FIELDS = new Set([
   'artifacts',
 ]);
 const FRAGMENT_ARTIFACT_FIELDS = new Set(['url', 'size', 'sha256']);
+const SUPPORTED_PLATFORMS = new Set(['darwin-arm64', 'win32-x64']);
 // Published releases made before the tier rollout still carry harmless manifest
 // fields. Strip them after validation, while continuing to reject trust fields.
 const LEGACY_FRAGMENT_FIELDS = new Set(['manifestVersion', 'ui', 'permissions', 'settings', 'backend', 'services']);
@@ -48,8 +49,8 @@ export function validateReleaseFragment(fragment, { id, version } = {}) {
   validatePluginMetadata(entry);
   if (entry.artifacts !== undefined) {
     if (!isRecord(entry.artifacts)) throw new Error('Invalid release fragment.');
-    for (const artifact of Object.values(entry.artifacts)) {
-      if (!isRecord(artifact)) throw new Error('Invalid release fragment.');
+    for (const [platform, artifact] of Object.entries(entry.artifacts)) {
+      if (!SUPPORTED_PLATFORMS.has(platform) || !isRecord(artifact)) throw new Error('Invalid release fragment.');
       assertAllowedFields(artifact, FRAGMENT_ARTIFACT_FIELDS);
     }
   }
