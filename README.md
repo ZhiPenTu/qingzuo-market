@@ -61,7 +61,7 @@ For already-published immutable releases, the verifier also accepts the legacy m
 
 ## Validation
 
-The verifier targets SDK 1.10.0 from the immutable `sdk-v1.10.0` Release tarball. Regenerate `package-lock.json` after that Release is published; until then `npm ci` cannot resolve the SDK URL.
+The verifier targets SDK 1.10.0 from the immutable `sdk-v1.10.0` Release tarball. `package-lock.json` pins that tarball and its integrity.
 
 ```sh
 npm ci --ignore-scripts
