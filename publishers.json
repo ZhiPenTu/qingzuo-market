@@ -40,6 +40,14 @@
     "ZhiPenTu/qingzuo-plugin-downloader": {
       "id": "official.downloader",
       "tier": "platform"
+    },
+    "ZhiPenTu/qingzuo-plugin-ai-assistant": {
+      "id": "official.ai-assistant",
+      "tier": "official"
+    },
+    "ZhiPenTu/qingzuo-plugin-diagnostics": {
+      "id": "official.diagnostics",
+      "tier": "official"
     }
   }
 }
