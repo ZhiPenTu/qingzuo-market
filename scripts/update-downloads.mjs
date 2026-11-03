@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { parseJsonStrict, validatePublisherCatalog } from './validate.mjs';
 
 const API_ROOT = 'https://api.github.com';
 const PER_PAGE = 100;
@@ -35,15 +36,15 @@ export function sumReleaseDownloads(releases, pluginId) {
   return total;
 }
 
-export function applyCatalogDownloads(catalog, publishers, releasesByRepository) {
-  if (!catalog || !Array.isArray(catalog.plugins)) throw new Error('Invalid catalog.');
+export function applyCatalogDownloads(catalog, registry, releasesByRepository) {
+  validatePublisherCatalog(catalog, registry);
   const next = structuredClone(catalog);
-  for (const [repository, pluginId] of Object.entries(publishers)) {
-    const entry = next.plugins.find(plugin => plugin.id === pluginId);
+  for (const [repository, publisher] of Object.entries(registry.publishers)) {
+    const entry = next.plugins.find(plugin => plugin.id === publisher.id);
     if (!entry) continue;
     const releases = releasesByRepository[repository];
     if (!Array.isArray(releases)) throw new Error('Missing releases for ' + repository + '.');
-    entry.stats = { ...entry.stats, downloads: sumReleaseDownloads(releases, pluginId) };
+    entry.stats = { ...entry.stats, downloads: sumReleaseDownloads(releases, publisher.id) };
   }
   return next;
 }
@@ -83,13 +84,14 @@ export async function fetchRepositoryReleases(repository, { token = process.env.
 
 export async function updateDownloads({ catalogPath = 'catalog.json', publishersPath = 'publishers.json', token, fetchImpl = fetch } = {}) {
   const original = await readFile(catalogPath, 'utf8');
-  const catalog = JSON.parse(original);
-  const publishers = JSON.parse(await readFile(publishersPath, 'utf8'));
+  const catalog = parseJsonStrict(original, 'catalog.json');
+  const registry = parseJsonStrict(await readFile(publishersPath, 'utf8'), 'publishers.json');
+  validatePublisherCatalog(catalog, registry);
   const releasesByRepository = {};
-  for (const repository of Object.keys(publishers)) {
+  for (const repository of Object.keys(registry.publishers)) {
     releasesByRepository[repository] = await fetchRepositoryReleases(repository, { token, fetchImpl });
   }
-  const next = applyCatalogDownloads(catalog, publishers, releasesByRepository);
+  const next = applyCatalogDownloads(catalog, registry, releasesByRepository);
   const body = JSON.stringify(next, null, 2) + '\n';
   if (body !== original) await writeFile(catalogPath, body);
   return { catalog: next, changed: body !== original };

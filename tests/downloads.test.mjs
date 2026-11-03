@@ -38,24 +38,40 @@ test('download totals reject malformed GitHub counters instead of silently under
 });
 
 test('catalog updates preserve release metadata and existing stats', () => {
+  const source = { type: 'github-release', repository: 'owner/fixture' };
   const catalog = {
     schemaVersion: 1,
     plugins: [
-      { id: 'official.fixture', version: '0.1.0', title: 'Fixture', stats: { installs: 9 } },
-      { id: 'official.unpublished', version: '0.1.0', title: 'Unpublished' },
+      { id: 'official.fixture', tier: 'platform', official: true, version: '0.1.0', title: 'Fixture', description: '', source, stats: { installs: 9 } },
+      {
+        id: 'official.unpublished',
+        tier: 'official',
+        official: true,
+        version: '0.1.0',
+        title: 'Unpublished',
+        description: '',
+        source: { type: 'github-release', repository: 'owner/unpublished' },
+      },
     ],
   };
-  const publishers = {
-    'owner/fixture': 'official.fixture',
-    'owner/unpublished': 'official.unpublished',
+  const registry = {
+    schemaVersion: 2,
+    publishers: {
+      'owner/fixture': { id: 'official.fixture', tier: 'platform' },
+      'owner/unpublished': { id: 'official.unpublished', tier: 'official' },
+    },
   };
   const releases = {
     'owner/fixture': [release('v0.1.0', [asset('official.fixture-0.1.0-darwin-arm64.ecplugin', 12)])],
     'owner/unpublished': [],
   };
-  const next = applyCatalogDownloads(catalog, publishers, releases);
+  const next = applyCatalogDownloads(catalog, registry, releases);
   assert.deepEqual(next.plugins[0].stats, { installs: 9, downloads: 12 });
   assert.deepEqual(next.plugins[1].stats, { downloads: 0 });
+  assert.deepEqual(
+    { tier: next.plugins[0].tier, official: next.plugins[0].official, source: next.plugins[0].source },
+    { tier: 'platform', official: true, source },
+  );
   assert.equal(catalog.plugins[0].stats.downloads, undefined);
 });
 
@@ -68,6 +84,8 @@ test('catalog validation accepts optional download stats and rejects invalid val
   };
   const entry = {
     id: 'official.fixture',
+    tier: 'official',
+    official: true,
     version: '0.1.0',
     title: 'Fixture',
     description: '',
@@ -85,14 +103,20 @@ test('catalog validation accepts optional download stats and rejects invalid val
 test('catalog sources must be valid and match the registered publisher', () => {
   const entry = {
     id: 'official.fixture',
+    tier: 'official',
+    official: true,
     version: '0.1.0',
     title: 'Fixture',
     description: '',
     source: { type: 'github-release', repository: 'owner/fixture' },
   };
   const catalog = { schemaVersion: 1, plugins: [entry] };
-  assert.doesNotThrow(() => validatePublisherCatalog(catalog, { 'owner/fixture': 'official.fixture' }));
-  assert.throws(() => validatePublisherCatalog(catalog, { 'owner/other': 'official.fixture' }), /not registered/);
+  const registry = { schemaVersion: 2, publishers: { 'owner/fixture': { id: 'official.fixture', tier: 'official' } } };
+  assert.doesNotThrow(() => validatePublisherCatalog(catalog, registry));
+  assert.throws(() => validatePublisherCatalog(catalog, {
+    schemaVersion: 2,
+    publishers: { 'owner/other': { id: 'official.fixture', tier: 'official' } },
+  }), /not registered/);
   assert.throws(() => validateCatalog({ schemaVersion: 1, plugins: [{ ...entry, source: { type: 'zip', repository: 'owner/fixture' } }] }), /source/);
   assert.throws(() => validateCatalog({ schemaVersion: 1, plugins: [{ ...entry, source: { type: 'github-release', repository: 'owner/..' } }] }), /source/);
 });
