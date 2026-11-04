@@ -303,7 +303,7 @@
     },
     {
       "id": "official.ai-assistant",
-      "tier": "official",
+      "tier": "platform",
       "official": true,
       "title": "AI 助手",
       "description": "在独立插件界面中使用轻作共享 AI 服务完成对话、模型选择与设置",
@@ -321,7 +321,7 @@
     },
     {
       "id": "official.diagnostics",
-      "tier": "official",
+      "tier": "platform",
       "official": true,
       "title": "日志调试",
       "description": "查看轻作、插件与浏览器的调试日志，支持按范围和级别筛选。",

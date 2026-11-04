@@ -43,11 +43,11 @@
     },
     "ZhiPenTu/qingzuo-plugin-ai-assistant": {
       "id": "official.ai-assistant",
-      "tier": "official"
+      "tier": "platform"
     },
     "ZhiPenTu/qingzuo-plugin-diagnostics": {
       "id": "official.diagnostics",
-      "tier": "official"
+      "tier": "platform"
     },
     "ZhiPenTu/qingzuo-plugin-wechat-studio": {
       "id": "official.wechat-studio",
