@@ -10,7 +10,7 @@
     "downloads": "node scripts/update-downloads.mjs"
   },
   "dependencies": {
-    "@commerce/plugin-sdk": "https://github.com/ZhiPenTu/qingzuo-desktop/releases/download/sdk-v1.10.0/commerce-plugin-sdk-1.10.0.tgz",
+    "@commerce/plugin-sdk": "https://github.com/ZhiPenTu/qingzuo-desktop/releases/download/sdk-v1.11.0/commerce-plugin-sdk-1.11.0.tgz",
     "adm-zip": "0.5.16",
     "semver": "7.8.5"
   },
