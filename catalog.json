@@ -308,11 +308,11 @@
       "tier": "platform",
       "official": true,
       "title": "AI 助手",
-      "description": "在独立插件界面中使用轻作共享 AI 服务完成对话、模型选择与设置",
+      "description": "在轻作桌面中连接共享 AI 服务，管理文本与图像服务的模型和访问密钥状态",
       "category": "效率工具",
-      "version": "0.1.2",
+      "version": "0.2.0",
       "api": "^1.10.0",
-      "releaseNotes": "补充内置图标；历史会话、对话与工具列表、文本模型选择和测试、共享图像服务状态与模型目录。访问密钥只通过桌面原生输入处理。修复双平台安装包与版本信息不一致的问题，确保各平台获取正确制品。",
+      "releaseNotes": "共享 AI 设置：连接轻作共享 AI 服务、查看与测试文本模型、管理共享图像服务状态与凭据。访问密钥只通过桌面原生输入处理。",
       "source": {
         "type": "github-release",
         "repository": "ZhiPenTu/qingzuo-plugin-ai-assistant"
